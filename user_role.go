@@ -1,15 +1,19 @@
 package bitwise
 
-type Role uint8
+type Role int64
 
 // Role constants using bitmasks
 const (
-	RoleNone     Role = 0
-	RoleRead     Role = 1 << iota // 2
-	RoleTriage                    // 4
-	RoleWrite                     // 8
-	RoleMaintain                  // 16
-	RoleAdmin                     // 32
+	RoleNone Role = 0
+	RoleRead Role = 1 << iota // 2
+	_
+	RoleTriage // 8
+	RoleWrite  // 16
+	_
+	RoleMaintain // 64
+	_
+	_
+	RoleAdmin // 512
 )
 
 // String returns the string representation of the Role

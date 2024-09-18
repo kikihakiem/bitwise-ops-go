@@ -120,7 +120,7 @@ func TestRoleString(t *testing.T) {
 		{bitwise.RoleWrite, "Write"},
 		{bitwise.RoleMaintain, "Maintain"},
 		{bitwise.RoleAdmin, "Admin"},
-		{bitwise.Role(64), "Unknown"},
+		{bitwise.Role(32), "Unknown"},
 	}
 
 	for _, tt := range tests {
