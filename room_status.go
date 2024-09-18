@@ -6,11 +6,11 @@ type RoomStatus uint8
 // Room status constants using bitmasks
 const (
 	RoomStatusVacant      RoomStatus = 1 << iota // 1
-	RoomStatusClean                              // 4
-	RoomStatusInspected                          // 8
-	RoomStatusMaintenance                        // 16
-	RoomStatusOutOfOrder                         // 32
-	RoomStatusReserved                           // 64
+	RoomStatusClean                              // 2
+	RoomStatusInspected                          // 4
+	RoomStatusMaintenance                        // 8
+	RoomStatusOutOfOrder                         // 16
+	RoomStatusReserved                           // 32
 
 	// Combined status
 	RoomStatusVacantCleanInspected RoomStatus = RoomStatusVacant | RoomStatusClean | RoomStatusInspected

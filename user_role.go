@@ -5,11 +5,11 @@ type Role uint8
 // Role constants using bitmasks
 const (
 	RoleNone     Role = 0
-	RoleRead     Role = 1 << iota // 1
-	RoleTriage                    // 2
-	RoleWrite                     // 4
-	RoleMaintain                  // 8
-	RoleAdmin                     // 16
+	RoleRead     Role = 1 << iota // 2
+	RoleTriage                    // 4
+	RoleWrite                     // 8
+	RoleMaintain                  // 16
+	RoleAdmin                     // 32
 )
 
 // String returns the string representation of the Role
