@@ -4,6 +4,21 @@ package bitwise
 type RoomStatus uint8
 
 // Room status constants using bitmasks
+//
+//	 /-------------- Reserved
+//	/
+//	|   /------------ OutOfOrder
+//	|  /
+//	|  |   /---------- Maintenance
+//	|  |  /
+//	|  |  |   /-------- Inspected
+//	|  |  |  /
+//	|  |  |  |   /------ Clean
+//	|  |  |  |  /
+//	|  |  |  |  |   /---- Vacant
+//	|  |  |  |  |  /
+//	|  |  |  |  |  |
+//	0  0  0  0  0  1
 const (
 	RoomStatusVacant      RoomStatus = 1 << iota // 1
 	RoomStatusClean                              // 2
