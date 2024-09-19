@@ -1,6 +1,9 @@
 package bitwise
 
-type Role int64
+type (
+	Role       int64
+	Permission int64
+)
 
 // Role constants using bitmasks
 const (
@@ -14,6 +17,14 @@ const (
 	_
 	_
 	RoleAdmin // 512
+
+	PermissionOrgRead     Permission = 1 << iota // 2
+	PermissionOrgWrite                           // 4
+	PermissionRepoRead                           // 8
+	PermissionRepoWrite                          // 16
+	PermissionCI                                 // 32
+	PermissionSecretRead                         // 64
+	PermissionSecretWrite                        // 128
 )
 
 // String returns the string representation of the Role
